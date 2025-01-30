@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Enter in the amount of wheels you want!");
+            int wheelCount;
+            var input = int.TryParse(Console.ReadLine(), out wheelCount);
+            
+            var vehicle = VehicleFactory.GetVehicle(wheelCount);
+            vehicle.Drive();
+                
         }
+        
     }
 }
